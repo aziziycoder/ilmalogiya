@@ -20,7 +20,7 @@ export const useGetOneQuery = (slug) => {
         setLoading(true);
         setError(null);
 
-        const res = await fetch(`${BASE_URL}/posts/slug/${slug}/`);
+        const res = await fetch(`${BASE_URL}/posts/${slug}/`);
         if (!res.ok) throw new Error("Post topilmadi");
 
         const data = await res.json();

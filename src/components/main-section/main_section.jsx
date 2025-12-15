@@ -69,6 +69,8 @@ const MainSection = () => {
     error: detailError,
   } = useGetOneQuery(slug);
 
+  console.log("slug", slug)
+
   const { randomPost, lastPost, loading, error } = useSidebarData();
 
   const handleTagChange = useCallback(
