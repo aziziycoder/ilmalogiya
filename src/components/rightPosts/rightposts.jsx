@@ -90,7 +90,7 @@ const RightPosts = ({ randomPost, lastPost }) => {
           </p>
         </div>
         <div className="post_link">
-          <Link to={`/posts/${randomPost.slug}`}>
+          <Link to={`/posts/${lastPost.slug}`}>
             To'liq o'qish <FaArrowRightLong />
           </Link>
         </div>
