@@ -4,6 +4,7 @@ import "./rightposts.scss";
 import { stripHTML } from "../../utils/stripHTML";
 import { memo } from "react";
 import { IoLogoInstagram } from "react-icons/io5";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const RightPosts = ({ randomPost, lastPost }) => {
   const cleanRandomDesc = stripHTML(randomPost.description || "");
@@ -60,6 +61,11 @@ const RightPosts = ({ randomPost, lastPost }) => {
               : cleanRandomDesc}
           </p>
         </div>
+        <div className="post_link">
+          <Link to={`/posts/${randomPost.slug}`}>
+            To'liq o'qish <FaArrowRightLong />
+          </Link>
+        </div>
       </div>
 
       <div className="lastpost shadow-elegant">
@@ -82,6 +88,11 @@ const RightPosts = ({ randomPost, lastPost }) => {
               ? cleanLastDesc.slice(0, 200) + "..."
               : cleanLastDesc}
           </p>
+        </div>
+        <div className="post_link">
+          <Link to={`/posts/${randomPost.slug}`}>
+            To'liq o'qish <FaArrowRightLong />
+          </Link>
         </div>
       </div>
     </div>

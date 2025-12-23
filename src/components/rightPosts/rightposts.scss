@@ -4,11 +4,12 @@
     flex-direction: column;
     gap: 25px;
 
-    .link{
+    .link {
         display: inline-flex;
         flex-direction: column;
         gap: 5px;
-        a{
+
+        a {
             display: flex;
             justify-content: center;
         }
@@ -51,6 +52,18 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        .post_link {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                fill: var(--accent);
+                color: var(--accent);
+                font-weight: 600;
+                margin-top: 15px;
+            }
+        }
     }
 
     .telegram {
@@ -78,13 +91,6 @@
 
 @media screen and (max-width: 1350px) {
     .rightposts {
-
-        .lastpost,
-        .randompost {
-            img {
-                display: none;
-            }
-        }
 
         .text p {
             display: -webkit-box;
