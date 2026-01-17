@@ -9,6 +9,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const RightPosts = ({ randomPost, lastPost }) => {
   const cleanRandomDesc = stripHTML(randomPost.description || "");
   const cleanLastDesc = stripHTML(lastPost.description || "");
+  const url = process.env.REACT_APP_API_MEDIA_URL;
+
 
   return (
     <div className="rightposts">
@@ -46,7 +48,7 @@ const RightPosts = ({ randomPost, lastPost }) => {
         </div>
         {randomPost.file && (
           <div className="img">
-            <img src={randomPost.file} alt={randomPost.title} />
+            <img src={url + randomPost.file} alt={randomPost.title} />
           </div>
         )}
         <div className="title">
@@ -74,7 +76,7 @@ const RightPosts = ({ randomPost, lastPost }) => {
         </div>
         {lastPost.file && (
           <div className="img">
-            <img src={lastPost.file} alt={lastPost.title} />
+            <img src={url + lastPost.file} alt={lastPost.title} />
           </div>
         )}
         <div className="title">
